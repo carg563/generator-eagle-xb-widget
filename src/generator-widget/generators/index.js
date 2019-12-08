@@ -122,7 +122,7 @@ module.exports = class extends Generator {
                     name: 'Default Size'
                 }
             ],
-            'default': ['hasLocale', 'hasSettingsPage', 'hasConfig', 'hasBuilderSupportModule', 'hasLayoutItemSettingPage', 'includeExtensions', 'defaultSize']
+            'default': ['hasLocale', 'hasSettingsPage', 'hasConfig',  'defaultSize']
         },
         {
             when: function (response) {
@@ -180,7 +180,7 @@ module.exports = class extends Generator {
                 }
 
             ],
-            'default': ['hasLocale', 'hasEmdeddedLayout', 'hasMultipleLayouts', 'hasSettingPage', 'hasConfig', 'hasBuilderSupportModule', 'includeMessageActions', 'includePublishMessages', 'includeExtensions', 'dataActions', 'defaultSize']
+            'default': ['hasLocale', 'hasEmdeddedLayout', 'hasMultipleLayouts', 'hasSettingPage', 'hasConfig', 'defaultSize']
         },
         {
             when: function (response) {
@@ -261,7 +261,7 @@ module.exports = class extends Generator {
                     name: 'Include a default size'
                 }
             ],
-            'default': ['autoBindDataSource', 'hasLocale', 'hasEmdeddedLayout', 'canCreateMapView', 'hasSettingPage', 'hasConfig', 'hasBuilderSupportModule', 'hasLayoutItemSettingPage', 'defaultSize']
+            'default': ['autoBindDataSource', 'hasLocale',   'hasSettingPage', 'hasConfig',  'defaultSize']
         },
         {
             when: function (response) {
