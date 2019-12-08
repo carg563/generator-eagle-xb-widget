@@ -1,5 +1,6 @@
 'use strict';
 const path = require('path');
+const yosay = require('yosay');
 const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const dasherize = require('underscore.string/dasherize');
