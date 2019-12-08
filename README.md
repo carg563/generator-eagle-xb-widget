@@ -20,7 +20,7 @@ The first prerequisite is to have [Yeoman](http://yeoman.io/) installed:
 $ npm install -g yo
 ```
 
-Finally install generator-eagle-xb-widget from npm:
+Then install generator-eagle-xb-widget from npm:
 
 ```bash
 $ npm install -g generator-eagle-xb-widget
