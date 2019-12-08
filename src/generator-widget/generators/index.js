@@ -77,6 +77,10 @@ module.exports = class extends Generator {
             name: 'description',
             message: 'Description:',
             'default': 'A custom Experience Builder widget.'
+        }, {
+            name: 'author',
+            message: 'Author:',
+            'default': 'The name of the person or company developing the widget.'
         },
         {
             when: function (response) {
@@ -289,10 +293,9 @@ module.exports = class extends Generator {
             this.widgetTitle = props.widgetTitle;
             this.description = props.description;
             this.widgetPath = props.widgetPath + "\\";
-            
+
             // properties that we need to get from the package json, if it exists:
-            this.author = utils.authorToString(utils.getPackageInfo('author'));
-            this.license = (utils.getPackageInfo('license') !== false ? utils.getPackageInfo('license') : '');
+            this.author = props.author;
 
             // if new path is used pull details from user input, else use config.
             this.widgetType = props.widgetType;
@@ -337,7 +340,7 @@ module.exports = class extends Generator {
             this
         );
 
-        this.log("Has tests " +this.hasTests);
+        this.log("Has tests " + this.hasTests);
         if (this.hasTests === true) {
             this.fs.copyTpl(
                 this.templatePath('tests/widget.test.tsx'),
@@ -370,7 +373,7 @@ module.exports = class extends Generator {
         }
 
         if (this.autoBindDataSource) {
-           
+
             manifest.properties['autoBindDataSource'] = true;
         }
         if (this.hasLocale) {
@@ -395,7 +398,7 @@ module.exports = class extends Generator {
             manifest.properties['hasMainClass'] = true;
         }
         if (this.canCreateMapView) {
-           
+
             manifest.properties['canCreateMapView'] = true;
         }
         if (this.hasSettingPage) {
