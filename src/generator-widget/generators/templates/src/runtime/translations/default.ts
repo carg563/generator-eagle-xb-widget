@@ -1,5 +1,5 @@
 export default {
-  _widgetLabel: 'demo',
+  _widgetLabel: '<%= widgetName %>',
   widgetProperties: 'Widget Properties',
   widgetFunctions: 'Widget Functions',
   widgetName: 'widget name:',

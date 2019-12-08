@@ -21,7 +21,7 @@ describe('demo widget', function () {
             messages: {},
         });
         let wrapper = shallow(<Widget />).shallow();
-        expect(wrapper.find('.widget-demo').length).toEqual(1);
+        expect(wrapper.find('.widget-<%= widgetName %>').length).toEqual(1);
     });
 
     it('without config', function () {
@@ -30,6 +30,6 @@ describe('demo widget', function () {
             messages: {},
         });
         let wrapper = shallow(<Widget />).shallow();
-        expect(wrapper.find('.widget-demo').length).toEqual(1);
+        expect(wrapper.find('.widget-<%= widgetName %>').length).toEqual(1);
     });
 });

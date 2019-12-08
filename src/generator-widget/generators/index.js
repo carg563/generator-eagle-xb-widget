@@ -344,12 +344,6 @@ module.exports = class extends Generator {
                 this.destinationPath(path.join(basePath, 'tests/widget.test.tsx')),
                 this
             );
-
-            this.fs.copyTpl(
-                this.templatePath('tests/properties.json'),
-                this.destinationPath(path.join(basePath, 'tests/properties.json')),
-                this
-            );
         }
         this.fs.copyTpl(
             this.templatePath('icon.svg'),

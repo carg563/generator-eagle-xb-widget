@@ -22,7 +22,7 @@ export default class Setting extends BaseWidgetSetting<AllWidgetSettingProps<IMC
 
   //Must have a render function.
   render(){
-    return <div className="widget-setting-demo">
+    return <div className="widget-setting-<%= widgetName %>">
       <div><FormattedMessage id="p1" defaultMessage={defaultI18nMessages.p1}/>: <input defaultValue={this.props.config.p1} onChange={this.onP1Change}/></div>
       <div><FormattedMessage id="p2" defaultMessage={defaultI18nMessages.p2}/>: <input defaultValue={this.props.config.p2} onChange={this.onP2Change}/></div>
     </div>
