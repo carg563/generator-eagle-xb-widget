@@ -9,7 +9,7 @@ This generator scaffolds out the boilerplate files that are needed when you are 
 
 Please note, this is a work in progress as Experience Builder is still in development.
 
-![Screenshot](https://raw.githubusercontent.com/Esri/generator-esri-appbuilder-js/master/docs/images/running-the-generators.png)
+![Screenshot](https://github.com/carg563/generator-eagle-xb-widget/blob/master/Capture.PNG)
 
 ## Getting Started
 
