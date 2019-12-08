@@ -1,5 +1,5 @@
 # generator-eagle-xb-widget
-Yeoman generator for creating experience builder widgets
+Yeoman generator for creating Experience Builder widgets
 
 > [Yeoman](http://yeoman.io) for creating custom [Experience Builder](https://www.esri.com/en-us/arcgis/products/arcgis-experience-builder/overview).
 
