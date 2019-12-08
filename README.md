@@ -15,13 +15,7 @@ Please note, this is a work in progress as Experience Builder is still in develo
 
 ### Installation
 
-The first prerequisite is to have the [grunt-cli](https://gruntjs.com/getting-started) installed. To install this, run:
-
-```bash
-npm install -g grunt-cli
-```
-
-Next you must install [Yeoman](http://yeoman.io/):
+The first prerequisite is to have [Yeoman](http://yeoman.io/) installed:
 
 ```bash
 $ npm install -g yo
