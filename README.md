@@ -73,7 +73,7 @@ my-xb-widget
 
 When you start Experience Builder you should see the widget in the widget panel:
 
-![Widget in the Builder](https://raw.githubusercontent.com/Esri/generator-esri-appbuilder-js/master/docs/images/widget-in-builder.png)
+![Widget in the Builder](https://github.com/carg563/generator-eagle-xb-widget/blob/master/xb.PNG)
 
 #Issues
 Find a bug or want to request a new feature? Please let us know by submitting an issue.
