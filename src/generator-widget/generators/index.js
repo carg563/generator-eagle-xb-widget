@@ -21,7 +21,7 @@ module.exports = class extends Generator {
                 return !fs.existsSync("./.yo-rc.json")
             },
             validate(answer) {
-                if (!fs.existsSync(answer + "client\\your-extensions\\widgets")) {
+                if (!fs.existsSync(answer + "\\client\\your-extensions\\widgets")) {
                     return 'Invalid path. Please ensure this is a valid path to your Experience Builder folder.';
                 } else {
                     return true;
@@ -288,7 +288,7 @@ module.exports = class extends Generator {
             this.widgetName = props.widgetName;
             this.widgetTitle = props.widgetTitle;
             this.description = props.description;
-            this.widgetPath = props.widgetPath;
+            this.widgetPath = props.widgetPath + "\\";
             
             // properties that we need to get from the package json, if it exists:
             this.author = utils.authorToString(utils.getPackageInfo('author'));
