@@ -261,7 +261,7 @@ module.exports = class extends Generator {
                     name: 'Include a default size'
                 }
             ],
-            'default': ['autoBindDataSource', 'hasLocale',   'hasSettingPage', 'hasConfig',  'defaultSize']
+            'default': ['autoBindDataSource', 'hasLocale', 'hasSettingPage', 'hasConfig', 'defaultSize']
         },
         {
             when: function (response) {
