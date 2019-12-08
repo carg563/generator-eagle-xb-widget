@@ -4,9 +4,9 @@
 
 ## About
 
-This generator scaffolds out the boilerplate files that are needed when you are creating custom Experience Builder widgets. This includes [generators](#running-the-generators) to set up your project and scaffold out the files needed to create custom widgets.
+This generator scaffolds out the boilerplate files that are needed when you are creating custom Experience Builder widgets. This includes [generators](#running-the-generators) to scaffold out the files needed to create custom, layout, theme or stand alone widgets.
 
-Please note, this is a work in progress as Experience Builder is still in development.
+**Please note, this is a work in progress as Experience Builder is still in development.**
 
 ![Screenshot](https://github.com/carg563/generator-eagle-xb-widget/blob/master/Capture.PNG)
 
