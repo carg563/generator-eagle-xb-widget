@@ -75,16 +75,16 @@ When you start Experience Builder you should see the widget in the widget panel:
 
 ![Widget in the Builder](https://github.com/carg563/generator-eagle-xb-widget/blob/master/xb.PNG)
 
-#Issues
+### Issues
 Find a bug or want to request a new feature? Please let us know by submitting an issue.
 
-#Contributing
+### Contributing
 I welcome contributions from anyone and everyone. 
 
-#Credit
+### Credit
 This generator was inspired by the https://github.com/Esri/generator-esri-appbuilder-js by @tomwayson and others
 
-#Licensing
+### Licensing
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
 http://www.apache.org/licenses/LICENSE-2.0
