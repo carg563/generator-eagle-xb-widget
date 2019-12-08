@@ -1,6 +1,6 @@
 {
   "name": "generator-eagle-xb-widget",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A yeoman generator to scaffold files for an Experience Builder widget",
   "files": [
     "generators"
@@ -15,7 +15,7 @@
   "scripts": {
     "test": "mocha --timeout 10000"
   },
-  "repository":{
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/carg563/generator-eagle-xb-widget.git"
   },
@@ -39,5 +39,7 @@
     "url": "https://github.com/carg563"
   },
   "license": "Apache-2.0",
-  "bugs": {"url":"https://github.com/carg563/generator-eagle-xb-widget/issues"}
+  "bugs": {
+    "url": "https://github.com/carg563/generator-eagle-xb-widget/issues"
+  }
 }
