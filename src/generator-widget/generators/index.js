@@ -12,7 +12,8 @@ module.exports = class extends Generator {
     prompting() {
         var done = this.async();
 
-        console.log(chalk.green('Welcome to the ArcGIS Experience Builder widget generator!'));
+        this.log(yosay('Welcome to the ArcGIS Experience Builder widget generator!'));
+        this.log(chalk.yellow('This generator can be run from any location.'));
 
         var prompts = [{
             name: "widgetPath",

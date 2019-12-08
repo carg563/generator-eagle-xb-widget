@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\generators"
+    "\\generators",
+    "\\generators\\templates",
+    "\\generators\\templates\\src",
+    "\\generators\\templates\\src\\runtime",
+    "\\generators\\templates\\src\\setting",
+    "\\generators\\templates\\tests",
+    "\\generators\\test"
   ],
   "SelectedNode": "\\generators\\index.js",
   "PreviewInSolutionExplorer": false
