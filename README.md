@@ -10,7 +10,7 @@ The idea for this generator was developed off the back of the esri [generator](h
 
 **Please note, this is a work in progress as Experience Builder is still in development.**
 
-![Screenshot](https://github.com/carg563/generator-eagle-xb-widget/blob/master/Capture.PNG)
+![Screenshot](https://github.com/carg563/generator-eagle-xb-widget/blob/master/generator.PNG)
 
 ## Getting Started
 
