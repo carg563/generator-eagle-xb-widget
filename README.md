@@ -77,7 +77,7 @@ Find a bug or want to request a new feature? Please let us know by submitting an
 I welcome contributions from anyone and everyone. 
 
 ### Credit
-This generator was inspired by the https://github.com/Esri/generator-esri-appbuilder-js by @tomwayson and others
+This generator was inspired by the https://github.com/Esri/generator-esri-appbuilder-js by [@tomwayson](https://twitter.com/tomwayson) and [@gavinrehkemper](https://twitter.com/gavinrehkemper)
 
 ### Licensing
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
