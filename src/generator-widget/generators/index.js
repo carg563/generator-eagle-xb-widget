@@ -122,7 +122,7 @@ module.exports = class extends Generator {
                     name: 'Default Size'
                 }
             ],
-            'default': ['hasLocale', 'hasSettingsPage', 'hasConfig',  'defaultSize']
+            'default': ['hasLocale', 'hasSettingsPage', 'hasConfig', 'defaultSize']
         },
         {
             when: function (response) {
@@ -266,7 +266,35 @@ module.exports = class extends Generator {
         {
             when: function (response) {
                 // only show this step if user answered TRUE to 'hasConfig'
-                return response.features.indexOf('defaultSize') > -1;;
+                return response.features.indexOf('hasBuilderSupportModule') > -1;
+            },
+            name: 'builderSupportType',
+            message: 'Builder support module type:',
+            type: 'list',
+            choices: [
+                {
+                    value: 'LAYOUT',
+                    name: 'Layout Builder'
+                },
+                {
+                    value: 'FLEXBOX',
+                    name: 'FlexBox Layout Builder'
+                },
+                {
+                    value: 'ROW',
+                    name: 'Row Layout Builder'
+                },
+                {
+                    value: 'SIDEBAR',
+                    name: 'Sidebar Layout Builder'
+                }
+            ],
+            'default': 'LAYOUT'
+        },
+        {
+            when: function (response) {
+                // only show this step if user answered TRUE to 'hasConfig'
+                return response.features.indexOf('defaultSize') > -1;
             },
             name: 'defaultWidth',
             message: 'Default Width:',
@@ -310,6 +338,7 @@ module.exports = class extends Generator {
             this.hasSettingPage = props.features.indexOf('hasSettingPage') > -1;
             this.hasConfig = props.features.indexOf('hasConfig') > -1;
             this.hasBuilderSupportModule = props.features.indexOf('hasBuilderSupportModule') > -1;
+            this.builderSupportType = props.builderSupportType;
             this.hasLayoutItemSettingPage = props.features.indexOf('hasLayoutItemSettingPage') > -1;
             this.supportInlineEditing = props.features.indexOf('supportInlineEditing') > -1;
             this.supportRepeat = props.features.indexOf('supportRepeat') > -1;
@@ -411,6 +440,38 @@ module.exports = class extends Generator {
         }
         if (this.hasBuilderSupportModule) {
             manifest.properties['hasBuilderSupportModule'] = true;
+            switch (this.builderSupportType) {
+                case "LAYOUT":
+                    this.fs.copyTpl(
+                        this.templatePath('src/runtime/layout-support.tsx'),
+                        this.destinationPath(path.join(basePath, 'src/runtime/builder-support.tsx')),
+                        this
+                    );
+                    break;
+                case "FLEXBOX":
+                    this.fs.copyTpl(
+                        this.templatePath('src/runtime/flex-support.tsx'),
+                        this.destinationPath(path.join(basePath, 'src/runtime/builder-support.tsx')),
+                        this
+                    );
+                    break;
+                case "ROW":
+                    this.fs.copyTpl(
+                        this.templatePath('src/runtime/row-support.tsx'),
+                        this.destinationPath(path.join(basePath, 'src/runtime/builder-support.tsx')),
+                        this
+                    );
+                    break;
+                case "SIDEBAR":
+                    this.fs.copyTpl(
+                        this.templatePath('src/runtime/sidebar-support.tsx'),
+                        this.destinationPath(path.join(basePath, 'src/runtime/builder-support.tsx')),
+                        this
+                    );
+                    break;
+                default:
+            }
+            
         }
         if (this.hasLayoutItemSettingPage) {
             manifest.properties['hasLayoutItemSettingPage'] = true;
