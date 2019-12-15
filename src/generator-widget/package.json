@@ -1,6 +1,6 @@
 {
   "name": "generator-eagle-xb-widget",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A yeoman generator to scaffold files for an Experience Builder widget",
   "files": [
     "generators"
