@@ -37,6 +37,7 @@ Scaffolds out the files needed to create a new custom widget.
 
 |Prompt|Description|Default|
 |------|-----------|-------|
+|Component Type|Create the widget as a class or function component|function
 |Widget Type|The type of widget to create|No default|
 |Widget Name|Folder name for output files and widget identifier|my-xb-widget|
 |Widget Title|The label for the widget|my-xb-widget|
