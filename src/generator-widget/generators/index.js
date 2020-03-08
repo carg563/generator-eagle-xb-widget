@@ -29,7 +29,27 @@ module.exports = class extends Generator {
                     return true;
                 }
             }
-        }, {
+        },
+        {
+            type: 'list',
+            choices: [
+                {
+                    value: 'FUNCTIONAL',
+                    name: 'Functional Component'
+                },
+                {
+                    value: 'CLASS',
+                    name: 'Class Component'
+                }
+            ],
+            name: 'componentType',
+            message: 'Component type you would like the widget to be:',
+            when: function (response) {
+                // only show if we dont have a config to work from'
+                return !fs.existsSync("./.yo-rc.json");
+            }
+        },
+        {
             type: 'list',
             choices: [
                 {
@@ -328,6 +348,7 @@ module.exports = class extends Generator {
             this.author = props.author;
 
             // if new path is used pull details from user input, else use config.
+            this.componentType = props.componentType;
             this.widgetType = props.widgetType;
             this.exbVersion = '1.0.0-beta.2';
             this.autoBindDataSource = props.features.indexOf('autoBindDataSource') > -1;
@@ -360,11 +381,20 @@ module.exports = class extends Generator {
         // if a new path has been chosen by user, reset the basePath
         let basePath = path.join(this.widgetPath, 'client\\your-extensions\\widgets\\', this.widgetName);
 
-        this.fs.copyTpl(
-            this.templatePath('src/runtime/widget.tsx'),
-            this.destinationPath(path.join(basePath, 'src/runtime/widget.tsx')),
-            this
-        );
+        if (this.componentType === 'FUNCTIONAL') {
+            this.fs.copyTpl(
+                this.templatePath('src/runtime/widget-function.tsx'),
+                this.destinationPath(path.join(basePath, 'src/runtime/widget.tsx')),
+                this
+            );
+        } else {
+            this.fs.copyTpl(
+                this.templatePath('src/runtime/widget-class.tsx'),
+                this.destinationPath(path.join(basePath, 'src/runtime/widget.tsx')),
+                this
+            );
+        }
+        
         this.fs.copyTpl(
             this.templatePath('src/runtime/translations/default.ts'),
             this.destinationPath(path.join(basePath, 'src/runtime/translations/default.ts')),
@@ -471,7 +501,7 @@ module.exports = class extends Generator {
                     break;
                 default:
             }
-            
+
         }
         if (this.hasLayoutItemSettingPage) {
             manifest.properties['hasLayoutItemSettingPage'] = true;
@@ -508,11 +538,20 @@ module.exports = class extends Generator {
         this.fs.write(path.join(basePath, 'manifest.json'), JSON.stringify(manifest, null, 2));
 
         if (this.hasSettingPage) {
-            this.fs.copyTpl(
-                this.templatePath('src/setting/setting.tsx'),
-                this.destinationPath(path.join(basePath, 'src/setting/setting.tsx')),
-                this
-            );
+            if (this.componentType === 'FUNCTIONAL') {
+                this.fs.copyTpl(
+                    this.templatePath('src/setting/setting-function.tsx'),
+                    this.destinationPath(path.join(basePath, 'src/setting/setting.tsx')),
+                    this
+                );
+            } else {
+                this.fs.copyTpl(
+                    this.templatePath('src/setting/setting-class.tsx'),
+                    this.destinationPath(path.join(basePath, 'src/setting/setting.tsx')),
+                    this
+                );
+            }
+            
             this.fs.copyTpl(
                 this.templatePath('src/setting/translations/default.ts'),
                 this.destinationPath(path.join(basePath, 'src/setting/translations/default.ts')),

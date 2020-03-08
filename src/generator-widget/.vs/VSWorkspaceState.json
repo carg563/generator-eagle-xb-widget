@@ -6,9 +6,10 @@
     "\\generators\\templates\\src",
     "\\generators\\templates\\src\\runtime",
     "\\generators\\templates\\src\\setting",
+    "\\generators\\templates\\src\\setting\\translations",
     "\\generators\\templates\\tests",
     "\\generators\\test"
   ],
-  "SelectedNode": "\\package.json",
+  "SelectedNode": "\\generators\\templates\\src\\runtime\\layout-support.tsx",
   "PreviewInSolutionExplorer": false
 }
