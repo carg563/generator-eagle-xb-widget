@@ -8,8 +8,6 @@ This generator scaffolds out the boilerplate files that are needed when you are 
 
 The idea for this generator was developed off the back of the esri [generator](https://github.com/Esri/generator-esri-appbuilder-js) created by [@tomwayson](https://twitter.com/tomwayson) and [@gavinrehkemper](https://twitter.com/gavinrehkemper)
 
-**Please note, this is a work in progress as Experience Builder is still in development.**
-
 ![Screenshot](https://github.com/carg563/generator-eagle-xb-widget/blob/master/generator.PNG)
 
 ## Getting Started
